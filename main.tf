@@ -3,7 +3,7 @@ provider "aws" {
 }
 
 terraform {
-  bucket "s3" {
+  backend "s3" {
     bucket = "la-terraform-course-adeelbarki"
     key = "terraform/terraform.tfstate"
     region = "eu-central-1"
