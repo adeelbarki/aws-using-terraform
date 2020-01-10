@@ -1,10 +1,21 @@
 #-------compute/variables.tf----------------
 
-variable "key_name" {
-  default = "tfkey"
+variable "key_name" {}
+
+variable "public_key_path" {}
+
+variable "subnet_ips" {
+  type = "list"
 }
 
-variable "public_key_path" {
-  default = "/home/cloud_user/.ssh/id_rsa.pub"
-}
+variable "instance_count" {}
+
+variable "instance_type" {}
+
+variable "security_group" {}
+
+variable "subnets" {}
+
+
+
 
