@@ -2,6 +2,14 @@ provider "aws" {
   region = "${var.aws_region}"
 }
 
+terraform {
+  bucket "s3" {
+    bucket = "la-terraform-course-adeelbarki"
+    key = "terraform/terraform.tfstate"
+    region = "eu-central-1"
+  }
+}
+
 # Deploy Storage Resource
 module "storage" {
   source = "./storage"
